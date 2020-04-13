@@ -1,0 +1,20 @@
+-- 一時的なユーザー
+drop table if exists practice_tmp_users cascade;
+
+create table practice_tmp_users (
+name varchar(100) not null
+, id serial primary key
+, mail text not null
+, password text not null
+, uuid text not null
+) ;
+
+-- ユーザー
+drop table if exists practice_users cascade;
+
+create table practice_users (
+id serial primary key
+, name varchar(100) not null
+, mail text not null
+, password text not null
+) ;
